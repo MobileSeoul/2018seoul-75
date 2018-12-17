@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="data_spinner">
+        <item>고기</item>
+        <item>해물</item>
+        <item>패스트푸드</item>
+        <item>면요리</item>
+        <item>분식</item>
+        <item>디저트</item>
+    </string-array>
+
+</resources>

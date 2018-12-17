@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+
+            android:text="판매자 등록"
+            android:textAlignment="textStart"
+
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="6dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="375dp"
+        android:layout_height="495dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+
+            <Button
+                android:id="@+id/editBtn"
+                android:layout_width="78dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:background="@drawable/buttonborder"
+                android:text="편집"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="71dp" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="78dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/spinner"
+                android:background="@drawable/buttonborder"
+                android:text="등록"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editBtn"
+                android:layout_alignEnd="@+id/subImg1"
+                android:text="장사 시작" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="52dp"
+                android:ems="10"
+                android:hint="상호명"
+                android:inputType="textNoSuggestions"
+                android:maxLength="20"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/mainImg"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="117dp"
+                app:srcCompat="@drawable/seller_image" />
+
+            <ImageView
+                android:id="@+id/subImg1"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/mainImg"
+                android:layout_marginEnd="25dp"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+            <ImageView
+                android:id="@+id/subImg2"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/mainImg"
+                android:layout_marginTop="234dp"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+            <ImageView
+                android:id="@+id/subImg3"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/subImg1"
+                android:layout_alignTop="@+id/subImg2"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="10dp"
+                android:fillViewport="true"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <EditText
+                        android:id="@+id/explainText"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="가게에 대한 소개, 메뉴에 대한 설명,연락처 정보 등을 입력해주세요"
+                        android:inputType="textMultiLine"
+                        android:maxLength="1000"
+                        android:scrollbars="vertical" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="112dp"
+
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/editBtn"
+                android:layout_below="@+id/editBtn"
+                android:entries="@array/data_spinner"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
